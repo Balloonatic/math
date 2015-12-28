@@ -99,9 +99,9 @@ class Math {
 
 					if ($decimals > 0) {
 						if ($decimal_digits < $decimals and $trailing_zeros) {
-							$result .= '.' . str_pad($decimal_value, $decimals, 0);
+							$result .= $decimal_point . str_pad($decimal_value, $decimals, 0);
 						} else {
-							$result .= $decimal_value ? ('.' . $decimal_value) : '';
+							$result .= $decimal_value ? ($decimal_point . $decimal_value) : '';
 						}
 					}
 				} else {
